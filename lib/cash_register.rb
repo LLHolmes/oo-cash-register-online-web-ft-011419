@@ -19,8 +19,7 @@ class CashRegister
   
   def apply_discount
     @total = @total*(1-(discount/100))
-    @discount == 0 ? "baby" : "not a baby"
-    # == 0 ? puts "There is no discount to apply" : puts "Your discount has been applied."
+    @discount == 0 ? "There is no discount to apply" : "Your discount has been applied."
   end
   
   def void_last_transaction
