@@ -5,7 +5,7 @@ class CashRegister
   
   def initialize (discount = 0)
     @total = 0.0
-    @discount = discount
+    @discount = (1-(discount/100.0))
     @items = []
   end
   
@@ -18,7 +18,7 @@ class CashRegister
   end
   
   def apply_discount
-    @total = @total*(1-(discount/100.0)).to_i
+    @total = (@total*(1-(@discount/100.0))).to_i
     @discount == 0 ? "There is no discount to apply." : "After the discount, the total comes to $#{@total.to_i}."
   end
   
