@@ -5,7 +5,7 @@ class CashRegister
   
   def initialize (discount = 0)
     @total = 0.0
-    @discount = 1-(discount/100)
+    @discount = (1-(discount/100)).to_f
     @items = []
   end
   
